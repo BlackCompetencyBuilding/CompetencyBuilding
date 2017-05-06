@@ -1,13 +1,20 @@
 package bean;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
+import static net.sourceforge.jwebunit.junit.JWebUnit.*;
+
+import org.junit.Before;
 import org.junit.Test;
-public class JunitTest{
-  @Test
- public void test(){
-   WebDriver driver = new FirefoxDriver();
-   driver.get("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp");
-  Assert.assertTrue(driver.getTitle().contains("Login Page"));
-    }
- }
+
+public class JunitTest {
+		@Test
+		public void test(){
+			setBaseUrl("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.js"); 
+	        
+	        assertTitleEquals("Login page");
+	       // setTextField("Uname", "admin");
+	       // setTextField("Password", "admin");
+	      clickLink("register");
+	        //submit();
+	        assertTitleEquals("Registration Form");
+		}
+		
+}
