@@ -8,7 +8,7 @@ public class JunitTest {
 
 		@Before
 		public void setup(){
-			setBaseUrl("http://localhost:8081/CustomerOnBoard/");
+			setBaseUrl("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp");
 			//http://10.0.0.116:8080/job/JunitTest1/ws/WebContent/
 		}
 		@Test
