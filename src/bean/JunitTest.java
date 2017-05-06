@@ -8,7 +8,9 @@ public class JunitTest {
 
 		@Before
 		public void setup(){
-			setBaseUrl("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent");
+			URLConnection openConnection = new URL("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent").openConnection();
+		openConnection.addRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0");
+			//setBaseUrl("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent");
 			//http://10.0.0.116:8080/job/JunitTest1/ws/WebContent/
 		}
 		@Test
