@@ -3,7 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.junit.Test;
-public class VerifyTitle{
+public class JunitTest{
   @Test
  public void test(){
    WebDriver driver = new FirefoxDriver();
